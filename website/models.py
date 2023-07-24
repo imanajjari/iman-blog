@@ -12,3 +12,14 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class OurInformation(models.Model):
+    address = models.CharField(max_length=1000)
+    address_description = models.CharField(max_length=510)
+    tell = models.IntegerField()
+    tell_description = models.CharField(max_length=510)
+    email = models.EmailField()
+    email_description = models.CharField(max_length=510)
+
+    def __str__(self):
+        return f'addres : {self.address[:50]} & tell {self.tell}'
