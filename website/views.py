@@ -5,7 +5,9 @@ from django.views import View
 # Create your views here.
 
 class index_view(View):
-    template_name = ''
     def get(self, request):
-        form = self.form_class
-        return render(request, 'website/index.html' , {'form':form})
+        return render(request, 'website/index.html')
+
+
+def contect_view(request):
+   return render(request, 'website/contact.html')

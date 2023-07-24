@@ -41,13 +41,13 @@
 
 
 
-{#                                {% if request.user.is_authenticated %}#}
-{#			  					    <li><a href="#">{{ request.user.username }}</a></li>#}
-{#			  					    <li><a href="{% url 'accounts:logout' %}">logout</a></li>#}
-{#                                {% else %}#}
-{#                                    <li><a href="{% url 'accounts:singup' %}">singup</a></li>#}
-{#			  					    <li><a href="{% url 'accounts:login' %}">login</a></li>#}
-{#                                {% endif %}#}
+                                {% if request.user.is_authenticated %}
+			  					    <li><a href="#">{{ request.user.username }}</a></li>
+			  					    <li><a href="{% url 'accounts:logout' %}">logout</a></li>
+                                {% else %}
+                                    <li><a href="{% url 'accounts:singup' %}">singup</a></li>
+			  					    <li><a href="{% url 'accounts:login' %}">login</a></li>
+                                {% endif %}
 
 
 
@@ -72,9 +72,9 @@
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-{#				          <li><a href="{% url 'website:home' %}">Home</a></li>#}
-{#				          <li><a href="{% url 'website:about' %}">About</a></li>#}
-{#				          <li  class="menu-has-children" ><a href="{%  url 'blog:inndex' %}">Blog</a></li>#}
+				          <li><a href="{% url 'website:home' %}">Home</a></li>
+				          <li><a href="{% url 'website:about' %}">About</a></li>
+				          <li  class="menu-has-children" ><a href="{%  url 'blog:inndex' %}">Blog</a></li>
 				          <li class="menu-has-children"><a href="">Pages</a>
 				            <ul>
 				            	  <li><a href="elements.html">Elements</a></li>
