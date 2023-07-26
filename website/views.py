@@ -15,7 +15,9 @@ class contect_view(View):
 
     def get(self, request):
         form = contactForm()
-        return render(request, 'website/contact.html', {'form': form})
+        ourInformation = OurInformation.objects.last()
+        content = {'form': form, 'ourInformation': ourInformation}
+        return render(request, 'website/contact.html', content)
 
     def post(self, request):
         if request.method == 'POST':
